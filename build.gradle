@@ -6,6 +6,10 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at http://gradle.org/docs/2.2.1/userguide/tutorial_java_projects.html
  */
+plugins {
+  id 'java'
+  id 'edu.sc.seis.launch4j' version '2.5.4'
+}
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
@@ -15,6 +19,10 @@ repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+launch4j {
+  mainClassName = 'SwingDemo'
 }
 
 // In this section you declare the dependencies for your production and test code
